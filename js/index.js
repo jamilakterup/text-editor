@@ -1,6 +1,6 @@
 
+const textArea = document.getElementById('area');
 function changeStyle(value) {
-    const textArea = document.getElementById('area');
     textArea.classList.toggle(value);
 }
 
@@ -19,7 +19,6 @@ document.getElementById('underline').addEventListener('click', () => {
 // text alignment-------------
 
 function textAlign(id1, id2, id3, id4) {
-    const textArea = document.getElementById('area');
     textArea.classList.add(id1);
     textArea.classList.remove(id2);
     textArea.classList.remove(id3);
@@ -43,19 +42,16 @@ document.getElementById('justify').addEventListener('click', () => {
 // last section style------------
 
 document.getElementById('font').addEventListener('click', () => {
-    const textArea = document.getElementById('area');
     textArea.classList.toggle('font');
 });
 
 
 document.getElementById('range').addEventListener('click', (e) => {
     const value = e.target.value;
-    const textArea = document.getElementById('area');
     textArea.style.fontSize = value + 'px';
 });
 
-document.getElementById('color').addEventListener('click', (e) => {
+document.getElementById('color').addEventListener('change', (e) => {
     const textColor = e.target.value;
-    const textArea = document.getElementById('area');
     textArea.style.color = textColor;
 });
